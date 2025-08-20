@@ -1,25 +1,23 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Aug 11 21:44:38 2025
+Created on Wed Aug 20 15:47:15 2025
 
 @author: asus
 """
-
 left = int(input())
 right = int(input())
+result = []
 li=[]
-li2=[]
-for i in range(left, right+1):
-    if i<=9:
-        digit = i
-        li.append(digit)
-    elif i>9:
-        digit = i
-        rem=digit%10
-        li2.append(rem)
-        digit=digit//10
-        
-        if 
-        
-        
-        
+for num in range(left, right+1):
+    n=num
+    valid = True
+    while n>0:
+       rem = n%10
+       if rem==0 or num%rem!=0:
+           valid = False
+           break
+       n//=10
+    if valid:
+      li.append(num)
+print(li)   
+
